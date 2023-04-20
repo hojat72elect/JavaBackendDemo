@@ -12,13 +12,13 @@ youtube tutorial.
 
 The written code is pretty generic to any SQL database; but we have connected it to a PostgreSQL driver.
 
+<li><strong>JDBC + H2</strong></li>
 
-<s><li><strong>JavaFX + SQLite</strong></li>
+The code inside `jdbc` directory is using [H2](https://www.h2database.com/) for connecting to a simple SQL database.
 
-The code inside `school_system` is a demo SQLite database with a frontend written in JavaFX.
+The tutorial I'm following for this one
+is [this](https://www.youtube.com/watch?v=xHminZ9Dxm4&list=PLIRBoI92yMam1HaUYrMAaPdbZKV1BFW0F&index=1&t=49s).
 
-The tutorial I'm following for this one is [this](https://www.youtube.com/watch?v=h1rYlMrvNyE).
-</s>
 
-https://www.youtube.com/watch?v=xHminZ9Dxm4&list=PLIRBoI92yMam1HaUYrMAaPdbZKV1BFW0F&index=1&t=49s
+
 </ol>
