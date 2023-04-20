@@ -42,15 +42,19 @@ javafx {
 }
 
 dependencies {
-    implementation('org.controlsfx:controlsfx:11.1.2')
-    implementation('com.dlsc.formsfx:formsfx-core:11.5.0') {
-        exclude(group: 'org.openjfx')
+    implementation("org.controlsfx:controlsfx:11.1.2")
+    implementation("com.dlsc.formsfx:formsfx-core:11.5.0") {
+        exclude(group: "org.openjfx")
     }
-    implementation('net.synedra:validatorfx:0.4.0') {
-        exclude(group: 'org.openjfx')
+    implementation("net.synedra:validatorfx:0.4.0") {
+        exclude(group: "org.openjfx")
     }
-    implementation('org.kordamp.ikonli:ikonli-javafx:12.3.1')
-    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
+    implementation("org.kordamp.ikonli:ikonli-javafx:12.3.1")
+    implementation("org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0")
+
+    // H2 database
+    implementation("com.h2database:h2:2.1.214")
+    implementation 'org.hibernate:hibernate-core:6.2.0.CR3'
 
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")

@@ -20,5 +20,5 @@ The code inside `school_system` is a demo SQLite database with a frontend writte
 The tutorial I'm following for this one is [this](https://www.youtube.com/watch?v=h1rYlMrvNyE).
 </s>
 
-
+https://www.youtube.com/watch?v=xHminZ9Dxm4&list=PLIRBoI92yMam1HaUYrMAaPdbZKV1BFW0F&index=1&t=49s
 </ol>
