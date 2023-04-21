@@ -17,8 +17,8 @@ The written code is pretty generic to any SQL database; but we have connected it
 The code inside `jdbc` directory is using [H2](https://www.h2database.com/) for connecting to a simple SQL database.
 
 The tutorial I'm following for this one
-is [this](https://www.youtube.com/watch?v=xHminZ9Dxm4&list=PLIRBoI92yMam1HaUYrMAaPdbZKV1BFW0F&index=1&t=49s).
-
+is [this](https://www.youtube.com/watch?v=KgXq2UBNEhA&t=961s).
+16:01
 
 
 </ol>

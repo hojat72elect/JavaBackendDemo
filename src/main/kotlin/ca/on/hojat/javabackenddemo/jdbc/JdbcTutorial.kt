@@ -1,14 +1,15 @@
 package ca.on.hojat.javabackenddemo.jdbc
 
-import java.sql.DriverManager
+import com.zaxxer.hikari.HikariDataSource
 import java.sql.SQLException
+import javax.sql.DataSource
 
-class JdbcTutorial {
-}
 
-fun main(args: Array<String>) {
+fun main() {
     try {
-        DriverManager.getConnection("jdbc:h2:mem:;INIT=RUNSCRIPT FROM 'classpath:users.sql';").use { connection ->
+        val dataSource = createDataSource()
+
+        dataSource.connection.use { connection ->
             println("connection is valid: ${connection.isValid(0)}")
 
 
@@ -23,9 +24,49 @@ fun main(args: Array<String>) {
                 println("${resultSet.getInt("id")} - ${resultSet.getString("name")}")
             }
 
+            // Insert
+            val insertPreparedStatement = connection.prepareStatement("insert into USERS (name) values (?)")
+            insertPreparedStatement.setString(1, "John")
+            val insertCount = insertPreparedStatement.executeUpdate()
+            println("insert count = $insertCount")
+
+            // update
+            val updatePs = connection.prepareStatement("update USERS set name = ? where name = ?")
+            updatePs.setString(1, "Johnny")
+            updatePs.setString(2, "John")
+            val updateCount = updatePs.executeUpdate()
+            println("update count = $updateCount")
+
+            // Delete
+            val deletePs = connection.prepareStatement("delete from USERS where name = ?")
+            deletePs.setString(1, "Johnny")
+            val deleteCount = deletePs.executeUpdate()
+            println("delete count = $deleteCount")
+
         }
     } catch (e: SQLException) {
         println(e)
         throw e
     }
 }
+
+private fun createDataSource(): DataSource {
+    // make a hikari connection pool and return a datasource to it.
+    val dataSource = HikariDataSource()
+    dataSource.jdbcUrl = "jdbc:h2:mem:;INIT=RUNSCRIPT FROM 'classpath:users.sql';"
+    return dataSource
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
