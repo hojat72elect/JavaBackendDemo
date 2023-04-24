@@ -1,6 +1,7 @@
-## Jave Backend demo
+## Java Backend demo
 
-This repository is a collection of all the Java backend technologies I have worked with so far:
+This repository is a collection of all the Java backend technologies I have worked with so far (other than Spring Boot).
+For a demo of Spring Boot go to [Spring Boot demo repository](https://github.com/hojat72elect/springdemo) of mine.
 
 <ol>
 <li><strong>PostgreSQL</strong></li>
